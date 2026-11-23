@@ -1,0 +1,265 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e5e9ed;
+    font-family: Arial, sans-serif;
+    color: #26394e;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.identificacao {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #a48143;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    letter-spacing: 3px;
+    margin: 12px 0;
+    color: #26394e;
+}
+
+.subtitulo {
+    color: #707e8b;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    background: #344b63;
+    border: 2px solid #b39760;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px #26394e30;
+}
+
+.cofre, .jogo {
+    width: 50%;
+    padding: 35px;
+}
+
+.cofre {
+    text-align: center;
+    border-right: 1px solid #64768a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-secao, .legenda {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #d5b77d;
+}
+
+#imagemCofre {
+    width: 240px;
+    max-width: 100%;
+    margin: 25px 0;
+    transition: 0.5s;
+    filter: drop-shadow(0 8px 8px #17283a80);
+}
+
+.cofre h2 {
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 23px;
+}
+
+.cofre p:last-child {
+    color: #c3cfda;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.jogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    color: #e0c58e;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    background: #25394e;
+    color: white;
+    border: 1px solid #91a0ae;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+}
+
+input:focus {
+    border-color: #d5b77d;
+}
+
+button {
+    padding: 14px;
+    margin-top: 15px;
+    background: #c2a36a;
+    border: none;
+    border-radius: 5px;
+    color: #26394e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #dfc48d;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.informacao {
+    background: #25394e;
+    padding: 16px;
+    margin-top: 25px;
+    border-left: 3px solid #c2a36a;
+}
+
+#mensagem {
+    color: white;
+    font-size: 13px;
+    margin-top: 9px;
+    min-height: 16px;
+}
+
+.tentativas {
+    margin-top: 25px;
+}
+
+#barras {
+    display: flex;
+    gap: 7px;
+    margin: 13px 0;
+}
+
+#barras span {
+    height: 7px;
+    flex: 1;
+    background: #c2a36a;
+    border-radius: 5px;
+}
+
+#barras span.usada {
+    background: #8b6970;
+}
+
+#contador {
+    text-align: right;
+    color: white;
+    font-size: 12px;
+}
+
+#alerta {
+    color: #ffd0b8;
+    font-size: 12px;
+    min-height: 18px;
+    margin-top: 15px;
+}
+
+.reiniciar {
+    background: transparent;
+    color: #e0c58e;
+    border: 1px solid #91a0ae;
+}
+
+.reiniciar:hover {
+    background: #455e77;
+}
+
+footer {
+    text-align: center;
+    margin: 25px;
+    color: #778493;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* Tela de sucesso */
+
+#overview {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #101e2cdd;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.janela {
+    background: #e5e9ed;
+    color: #26394e;
+    width: 380px;
+    max-width: 100%;
+    padding: 30px;
+    text-align: center;
+    border-top: 5px solid #c2a36a;
+    border-radius: 6px;
+    animation: aparecer 0.5s;
+}
+
+.sucesso {
+    color: #597c69;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.janela h2 {
+    font-family: Georgia, serif;
+    margin: 15px 0;
+    font-size: 25px;
+}
+
+.janela img {
+    width: 170px;
+    max-width: 100%;
+}
+
+.janela p:not(.sucesso) {
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+

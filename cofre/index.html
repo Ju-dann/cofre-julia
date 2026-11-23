@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofre Secreto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p class="identificacao">SISTEMA DE SEGURANÇA</p>
+        <h1>COFRE SECRETO</h1>
+        <p class="subtitulo">Descubra a combinação e libere o acesso.</p>
+    </header>
+
+    <main class="container">
+        <section class="cofre">
+            <p class="titulo-secao">ÁREA PROTEGIDA</p>
+            <img id="imagemCofre"
+                src="imagens/Cofre fechado.png"
+                alt="Cofre fechado">
+            <h2>Acesso restrito</h2>
+            <p>Este cofre possui uma senha de 1 a 50.</p>
+        </section>
+        <section class="jogo">
+            <label for="numero">DIGITE A SENHA</label>
+            <input
+                type="number"
+                id="numero"
+                min="1"
+                max="50"
+                step="1"
+                placeholder="Ex: 50"
+            >
+            <button id="botaoTentar">VERIFICAR SENHA</button>
+            <div class="informacao">
+                <p class="legenda">MENSAGEM DO SISTEMA</p>
+                <p id="mensagem">Aguardando tentativa...</p>
+            </div>
+            <div class="tentativas">
+                <p class="legenda">TENTATIVAS RESTANTES</p>
+                <div id="barras">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p id="contador">7 de 7</p>
+            </div>
+            <p id="alerta"></p>
+            <button id="botaoReiniciar" class="reiniciar">
+                REINICIAR JOGO
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>COFRE SECRETO</p>
+    </footer>
+
+    <!-- Tela que aparece quando o jogador acerta -->
+    <div id="overview">
+        <div class="janela">
+            <p class="sucesso">ACESSO AUTORIZADO</p>
+            <h2>Cofre desbloqueado!</h2>
+            <img src="imagens/Cofre aberto.png"
+                alt="Cofre aberto">
+            <p id="resultado"></p>
+            <button id="botaoNovoJogo">JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
